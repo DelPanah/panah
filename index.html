@@ -1,51 +1,145 @@
-
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>پناه</title>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: "Vazirmatn", sans-serif;
-      background: linear-gradient(to bottom, #f0f4f8, #d0e2ec);
+      font-family: 'Vazirmatn', sans-serif;
       margin: 0;
       padding: 0;
+      background: #f8f9fc;
+      color: #2c3e50;
+    }
+    header {
+      background: #ffffff;
+      padding: 1rem 2rem;
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
-      height: 100vh;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
-    .container {
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #34495e;
+      font-weight: 500;
+    }
+    .hero {
       text-align: center;
-      background: white;
-      border-radius: 20px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.1);
-      padding: 40px;
-      max-width: 500px;
+      padding: 6rem 2rem;
+      background: linear-gradient(to bottom right, #e0eafc, #cfdef3);
     }
-    h1 {
-      color: #0077b6;
-      font-size: 2rem;
+    .hero h1 {
+      font-size: 2.5rem;
+      color: #2c3e50;
     }
-    p {
-      color: #333;
-      font-size: 1.1rem;
-      margin-top: 20px;
+    .hero p {
+      font-size: 1.2rem;
+      color: #5d6d7e;
+      margin: 1rem 0 2rem;
     }
-    .signature {
-      margin-top: 30px;
-      font-size: 0.9rem;
-      color: #555;
+    .hero a.button {
+      background: #3498db;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .hero a.button:hover {
+      background: #2980b9;
+    }
+    section {
+      padding: 3rem 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    h2 {
+      text-align: center;
+      color: #2c3e50;
+    }
+    .message-box, .gallery, .contact-form {
+      background: #ffffff;
+      padding: 1.5rem;
+      margin-top: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+    textarea, input[type="text"], input[type="email"] {
+      width: 100%;
+      padding: 0.75rem;
+      margin-top: 0.5rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-family: inherit;
+    }
+    button {
+      margin-top: 1rem;
+      padding: 0.6rem 1.5rem;
+      background: #3498db;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    button:hover {
+      background: #2980b9;
     }
   </style>
-  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
+  <header>
+    <div><strong>پناه</strong></div>
+    <nav>
+      <a href="#home">خانه</a>
+      <a href="#about">درباره پناه</a>
+      <a href="#messages">پیام‌ها</a>
+      <a href="#gallery">گالری</a>
+      <a href="#contact">تماس</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
     <h1>تو هیچ‌وقت تنها نیستی</h1>
-    <p>چون همیشه جایی هست که توش امید بمونه... جایی مثل پناه 💙</p>
-    <p class="signature">ساخته شده با عشق برای دل‌هایی که دنبال نورن</p>
-  </div>
+    <p>چون چور همیشه جایی هست که توش امید بمونه... جایی مثل پناه</p>
+    <a href="#about" class="button">بیشتر بدانید</a>
+  </section>
+
+  <section id="about">
+    <h2>درباره پناه</h2>
+    <div class="message-box">
+      <p>پناه پروژه‌ای انسان‌محور است برای اینکه یادآوری کنیم هیچ‌کس تنها نیست. اینجا جایی‌ست برای نوشتن، گفتن، و شنیدن امید.</p>
+    </div>
+  </section>
+
+  <section id="messages">
+    <h2>پیام‌های دلگرم‌کننده</h2>
+    <div class="message-box">
+      <textarea rows="4" placeholder="پیامت رو بنویس..."></textarea>
+      <button onclick="alert('پیامت ثبت شد (صرفاً برای نمایش آزمایشی)')">ارسال پیام</button>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <h2>گالری امید</h2>
+    <div class="gallery">
+      <p>در آینده اینجا تصاویر دلگرم‌کننده و الهام‌بخش نمایش داده می‌شن.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>ارتباط با ما</h2>
+    <div class="contact-form">
+      <input type="text" placeholder="نام">
+      <input type="email" placeholder="ایمیل">
+      <textarea rows="4" placeholder="پیام شما"></textarea>
+      <button>ارسال</button>
+    </div>
+  </section>
 </body>
 </html>
